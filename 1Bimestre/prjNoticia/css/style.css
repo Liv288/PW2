@@ -1,0 +1,206 @@
+body { 
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Inicio do header */
+.header-container {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #C4170C;
+}
+
+.logo-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar li {
+    display: inline;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.search-btn {
+    background:#faf7f7;
+    height: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items:center;
+}
+
+.search-text {
+    background: none;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+}
+
+.bi-search {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px; /* Adiciona um espaço entre a lupa e o campo de texto */
+}
+/* Fim do header */
+
+
+
+.title {
+    margin: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 1%; 
+    gap: 5%; /* Espaçamento entre os containers */
+    margin-left: 2.5%;
+}
+
+.noticia {
+    flex: 1; /* Faz com que todos os containers tenham o mesmo tamanho */
+    background-color: #f0f0f0;
+    padding: 2%;
+    border-radius: 8px;
+    margin: 0 10px; /* Espaçamento lateral entre os containers */
+    display: flex;
+    flex-direction: column; /* Empilha os itens internamente (imagem, título, descrição) */
+    align-items: center;
+    box-shadow: 0px 8px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticia:hover {
+    transform: scale(1.02); /* Aumenta um pouco o tamanho ao passar o mouse */
+    box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.3); /* Intensifica a sombra ao passar o mouse */
+}
+
+img {
+    border-radius: 5%;
+    width: 260px;
+    height: 173px;
+}
+.imagem{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+.section-img{
+    width: 360px;
+    height: 273px;
+    border-radius: 2%;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.subtitle{
+    color: #787878;
+}
+
+.desc{
+    width: 65%;
+    height: 40%;
+    font-size: large;
+    justify-self: left;
+}
+
+.texto{
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+
+ /*inicio footer*/
+
+ footer {
+    background-color: #C4170C;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o logo e as últimas notícias */
+    margin-left: 5%;
+}
+
+.footer-logo-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.unt {
+    font-size: 1em;
+    color: white;
+    margin: 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li {
+    display: inline; /*na mesma linha*/
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+ /*Fim footer*/
