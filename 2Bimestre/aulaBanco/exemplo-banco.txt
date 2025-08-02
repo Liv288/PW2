@@ -1,0 +1,19 @@
+http://localhost/phpmyadmin
+
+nome do banco: dbComercio
+
+create table tbContato(
+    idContato int primary key auto_increment,
+    nome varchar(50),
+    email varchar(40),
+    assunto varchar(40),
+    mensagem varchar(40)
+);
+
+insert into tbcontato values (
+    null,
+    'Clodoaldo Bastos',
+    'clodoaldo@gmail.com',
+    'Fazer o projeto muito loko',
+    'Quando iremos iniciar o projeto?'
+   );
