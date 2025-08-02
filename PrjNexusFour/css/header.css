@@ -1,0 +1,205 @@
+
+
+/*header inicio*/
+header {
+    background-color: #091f4c;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+   justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menus {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap; 
+}
+
+.menu-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.menu-title {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.Entrar {
+    margin-left: 7px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600; 
+    cursor: pointer;
+}
+
+.menu-group {
+    display: flex;
+    align-items: center;
+    gap: 23px; 
+}
+
+.menu-title::before {
+    content: '';
+    position: absolute;
+    top: -29px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-title:hover::before {
+    opacity: 1;
+}
+
+/* Container do Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Garantir que o dropdown fique sobre outros elementos */
+    border: 1px solid #ccc;
+    border-radius: 18px; 
+    transition: all 0.3s ease;
+    top: 100%; 
+    left: 0;
+    margin-top: 5px; 
+}
+
+/* Itens do Dropdown */
+.dropdown-content a {
+    color: #000;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 5px;
+    display: block;
+    font-size: 16px;
+    transition: all 0.2s ease; 
+}
+
+/* Efeito ao passar o mouse sobre os itens do dropdown */
+.dropdown-content a:hover {
+    background-color: #f2f2f2;
+    transform: scale(0.95); 
+}
+
+/* Exibição do dropdown */
+.menu:hover .dropdown-content {
+    display: block;
+    transform: scale(0.98); 
+}
+
+.bi-chevron-down{
+    transition: transform 0.1s ease;
+}
+
+/* Quando passar o mouse sobre o menu ou quando o menu estiver ativo */
+.menu:hover .bi-chevron-down,
+.menu.active .bi-chevron-down { /* A classe "active" pode ser usada se o menu for ativado ao clicar */
+    transform: rotate(180deg); /* Rotaciona o ícone 180 graus */
+}
+
+/*header fim*/
+
+/* Lupa inicio */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #b6b3b3;
+    height: 50px;
+    padding: 0 15px;
+    border-radius: 20px;
+    transition: width 0.5s;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+/* Input inicialmente oculto */
+.search-box input {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 16px;
+    width: 0;
+    transition: width 0.5s;
+    color: #666;
+}
+
+/* Ativo: input expandido */
+.search-box.active input {
+    width: 200px;
+}
+
+/* Botão da lupa + texto “Buscar” */
+.search-btn {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    gap: 8px;
+    text-decoration: none; 
+    padding: 0;
+    border-radius: 0; 
+}
+
+.search-btn img {
+    width: 16px;
+    height: 16px;
+    filter: grayscale(100%) brightness(0.5);
+}
+
+/* Texto “Buscar” */
+.search-label {
+    color: #888;
+    font-size: 16px;
+}
+
+/* Esconde o texto “Buscar” ao abrir */
+.search-box.active .search-label {
+    display: none;
+}
+
+/* Brilho azul no container */
+.search-box.active {
+    box-shadow: 0 0 10px 4px rgba(0, 113, 234, 0.6); 
+    border: 2px solid rgba(0, 113, 234, 0.6);
+}
+
+/* Lupa fim */
+
+/* header - final */
+
+/* Container - inicio */
+
+.entrar {
+    text-decoration: none;
+    color: inherit; /* ou qualquer cor que você queira que o texto tenha */
+}

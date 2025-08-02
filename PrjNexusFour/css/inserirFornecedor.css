@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    color: white;
+}
+
+
+.title{
+    margin-bottom: 22px;
+    font-size: 200%;
+    text-align: center;
+    font-weight: 700;
+    color: #18449e;
+}
+
+
+.containerPai{
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    height: 50vh;
+    border-radius: 20px;
+    padding: 32px 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.288);
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.atributo{
+    font-size: 170%;
+    color: #0e285b;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}

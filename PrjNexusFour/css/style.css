@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 40px;
+    margin: 0;
+}
+
+h2 {
+    margin: 5vh;
+    width: 70%;        /* mesmo que a tabela */
+    margin: 40px auto 10px;
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+.containerTabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10vh;
+}
+.flexTabela{
+    display: flex;
+    justify-content: center;
+}
+.linkTabela{
+    margin: 0 auto;
+    padding: 3vh;
+    background-color: #0e285b;
+    color: white;
+    text-decoration: none;
+    border-radius: 2vh;
+    margin: 2vh;
+    transition: all 0.5s;
+}
+.linkTabela:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 0.5vh  rgba(0, 0, 0, 0.256);
+}
+
+table {
+    width: 80%; /* diminui a largura */
+    margin: 20px auto; /* centraliza horizontalmente */
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border-bottom: solid 1px #aeaeae;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #091f4c;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #eef6f3;
+}
+
+.livia{
+    background-color: #deaff7;
+}
+
+.maria{
+    background-color: #f3a1de;
+}
+
+.containerRequisito{
+    margin-top: 100%;
+}

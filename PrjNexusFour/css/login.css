@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    color: white;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+input, button{
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+button{
+    margin: 0 auto;
+    background-color: #154cba;
+    margin-top: 8px;
+    font-weight: 700;
+    color: white;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 50%;
+
+}
+
+.formLogin, .formCadastro button{
+    width: 50%;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    width: 52%;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.288);    
+}
+
+input{
+    background-color: #244486;
+    color: white;
+    width: 100%;
+}
+
+select, input[type="date"] {
+    background-color: #244486;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M0%200l5%207%205-7z%22%20fill%3D%22white%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 10px 7px;
+    padding-right: 40px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.pqp{
+    color: white;
+}
+.organizar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+}
+
+.inputCadastro {
+    width: 20%;
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+h2{
+    margin-bottom: 22px;
+    font-size: 200%;
+    text-align: center;
+    font-weight: 700;
+}
+
+p{
+    margin-bottom: 32px;
+    width: 40%;
+    text-align: center;
+    color: white;
+}
+
+.containerPai{
+    width: 100%;
+    height: 100vh;
+    background-color: #091f4c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 97%;
+    height: 92vh;
+    background-color: #0e285b;
+    border-radius: 10px;
+    padding: 32px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.288);
+}
+
+.card::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(../images/background.png);
+    filter: brightness(0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    transition: all 0.5s;
+}
+
+.esquerda, .direita{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.formLogin, .facaLogin, .formCadastro, .facaCadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.facaLogin, .facaCadastro{
+    position: absolute;
+}
+
+.facaLogin h2, .facaLogin p, .facaCadastro h2, .facaCadastro p{
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.facaLogin button, .facaCadastro button{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.card.loginActive .facaLogin{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card.loginActive .facaCadastro{
+    transform: translateX(0);
+    transition: all 0.3s 0.3s;
+    opacity: 1;
+}
+
+.card.loginActive .formLogin{
+    transition: all 0.3s 0.3s;
+    opacity: 1;
+}
+
+.card.loginActive .formCadastro{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card.loginActive::after{
+    transform: translateX(50%);
+}
+
+.card.cadastroActive .facaCadastro{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card.cadastroActive .formLogin{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card.cadastroActive::after{
+    transform: translateX(-50%);
+}
+
+.card.cadastroActive .facaLogin{
+    transform: translateX(0);
+    transition: all 0.3s 0.3s;
+    opacity: 1;
+}
+
+.card.cadastroActive .formCadastro{
+    transition: all 0.3s 0.3s;
+    opacity: 1;
+}
+
+.facaCadastro{
+    transition: all 0.3s 0;
+    transform: translateX(200%);
+    opacity: 0;
+}
+
+.formLogin{
+    opacity: 0;
+    transition: all 0.3s 0;
+}
+
+.facaLogin{
+    transition: all 0.3s 0;
+    transform: translateX(-200%);
+    opacity: 1;
+}
+
+.formCadastro{
+    opacity: 1;
+    transition: all 0.3s 0;
+}
+
+@media (max-width: 600px){
+    h2{
+        font-size: 130%;
+    }
+
+    input, button{
+        width: 100%;
+    }
+
+    .esquerda{
+        margin-right: 5%;
+    }
+
+    .direita{
+        margin-left: 5%;
+    }
+
+    p{
+        width: 80%;
+    }
+
+    .facaLogin button, .facaCadastro button{
+        width: 80%;
+    }
+
+    .card.loginActive .esquerda{
+        margin-top: -120%;
+        margin-left: 50%;
+    }
+
+    .card.loginActive .esquerda h2{
+        font-size: 200%;
+        width: 400px;
+    }
+
+    .card.loginActive .formLogin{
+        margin-top: 0;
+    }
+
+    .card.loginActive .formLogin p{
+        width: 100%;
+    }
+
+    .card.loginActive .facaLogin{
+        margin-bottom: -120%;
+    }
+
+    .card.loginActive .direita{
+        margin-bottom: -120%;
+    }
+
+    .card.loginActive .direita .facaCadastro{
+        margin-right: 95%;
+    }
+
+    .card.loginActive .direita .facaCadastro p{
+        width: 250%;
+    }
+
+    .card.loginActive .direita .facaCadastro button{
+        width: 150%;
+    }
+
+    .card.cadastroActive .esquerda .facaLogin{
+        margin-top: -100%;
+        margin-left: 50%;
+    }
+
+    .card.cadastroActive .esquerda .facaLogin p{
+        width: 300%;
+    }
+
+    .card.cadastroActive .esquerda .facaLogin button{
+        width: 200%;
+    }
+
+    .card.cadastroActive .direita .formCadastro{
+        margin-bottom: -300%;
+        margin-right: 200%;
+    }
+
+    .card.cadastroActive .direita .formCadastro input, 
+    .card.cadastroActive .direita .formCadastro button{
+        width: 200%;
+        height: 10%;
+        border-radius: 10px;
+    }
+
+    .card.cadastroActive .direita .formCadastro h2{
+        margin-right: -100%;
+    }
+
+    .card.cadastroActive .direita .formCadastro button{
+        padding: 6px 10px;
+    }
+
+    .card.loginActive .facaCadastro{
+        transform: translateY(0);
+    }
+
+    .card.loginActive::after{
+        transform: translateY(50%);
+    }
+
+    .card.cadastroActive::after{
+        transform: translateY(-50%);
+    }
+
+    .card.cadastroActive .facaLogin{
+        transform: translateY(0);
+    }
+
+    .facaCadastro{
+        transform: translateY(200%);
+    }
+
+    .facaLogin{
+        transform: translateY(-200%);
+    }
+}
+
+.entrar {
+    text-decoration: none;
+    color: inherit; /* ou qualquer cor que você queira que o texto tenha */
+}

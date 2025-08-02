@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 70px; 
+    overflow-x: hidden; 
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* 07183b */
+
+/* Container - inicio */
+
+.container{
+    background-color: #091f4c;
+    width: 30%;
+    height: 20%;
+    margin: 2%;
+    margin-top: 4%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 1%;
+    border-radius: 5%;
+    margin-left: 35%;
+}
+
+.title{
+    color: black;
+    font-weight: 600;
+    margin-left: 12%;
+}
+.container ol li{
+    color: black;
+    font-size: 18px;
+    padding: 0.6%;
+}
+/* Container - final */
+
+@media (max-width: 600px) {
+
+    .container{
+        width: 95%;
+        margin: 3%;
+        margin-top: 50%;
+    }
+}
+
+
